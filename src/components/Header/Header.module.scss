@@ -1,0 +1,9 @@
+@use '../../variables' as vars;
+
+.root {
+  display: flex;
+  justify-content: space-between;
+  background-color: lighten(vars.$separate-color, 5%);
+  padding: 10px 15px;
+  color: rgb(255, 255, 255);
+}

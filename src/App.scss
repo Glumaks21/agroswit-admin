@@ -1,0 +1,19 @@
+@use './variables' as vars;
+
+.App {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  color: vars.$primary-text-color;
+
+  .content {
+    background-color: vars.$bg-color;
+    display: flex;
+    flex: 1;
+
+    main {
+      flex: 1;
+    }
+  }
+}
