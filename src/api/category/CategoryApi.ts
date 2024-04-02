@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { ICategory } from './types';
+import { ApiError } from '../ApiError';
 
 const baseUrl = 'http://localhost:8080/api/v1/categories';
 
@@ -10,8 +11,8 @@ export default class CategoryApi {
 
       return resp.data;
     } catch (e) {
-      console.log(e);
-      throw e;
+      console.error(e);
+      throw new ApiError();
     }
   }
 }

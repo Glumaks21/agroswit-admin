@@ -1,24 +1,18 @@
-import { Button } from '../UI/Button';
+import { Menu } from './Menu';
 import cl from './Sidebar.module.scss';
+
+// const menuItems = [
+//   {
+//     name: 'Categories',
+//     icon: 'temp',
+//   },
+// ];
 
 export const Sidebar = () => {
   return (
     <aside className={cl.root}>
       <div>Sidebar</div>
-      <ul>
-        <li>
-          <Button>Button</Button>
-        </li>
-        <li>
-          <Button>Button</Button>
-        </li>
-        <li>
-          <Button>Button</Button>
-        </li>
-        <li>
-          <Button>Button</Button>
-        </li>
-      </ul>
+      <Menu />
     </aside>
   );
 };

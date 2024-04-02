@@ -1,17 +1,24 @@
-import { Header } from './components/Header';
-import { Sidebar } from './components/Sidebar';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './routes/router';
 import './App.scss';
+import { createTheme } from '@mui/material';
+import { ThemeProvider } from '@emotion/react';
 
-function App() {
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#00742F',
+      contrastText: '#FFF',
+    },
+  },
+});
+
+export const App = () => {
   return (
     <div className="App">
-      <Header />
-      <div className="content">
-        <Sidebar />
-        <main></main>
-      </div>
+      <ThemeProvider theme={theme}>
+        <RouterProvider router={router} />
+      </ThemeProvider>
     </div>
   );
-}
-
-export default App;
+};

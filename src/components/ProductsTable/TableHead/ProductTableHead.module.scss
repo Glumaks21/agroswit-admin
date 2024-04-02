@@ -1,0 +1,9 @@
+@use '../../../variables' as vars;
+
+.root {
+  border-bottom: 1px solid vars.$separate-color;
+  
+  .cell {
+    border-bottom: none;
+  }
+}
